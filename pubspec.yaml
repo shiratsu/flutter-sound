@@ -27,6 +27,8 @@ dependencies:
   flutter_dotenv: ^2.1.0
   http: ^0.12.1
   firebase_admob: ^0.9.3+2
+  shared_preferences: ^0.5.7+3
+  flutter_user_agent: ^1.2.2
 
 dev_dependencies:
   flutter_test:
