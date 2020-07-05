@@ -34,6 +34,7 @@ class _TopPageState extends State<TopPage> {
   @override
   void initState() {
     super.initState();
+    _itemsController.add(Fetching());
     requestSoundList();
   }
 
@@ -52,32 +53,77 @@ class _TopPageState extends State<TopPage> {
         title: Text(widget.title),
       ),
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
-        ),
-      ),
+          // Center is a layout widget. It takes a single child and positions it
+          // in the middle of the parent.
+          child: StreamBuilder(
+        stream: _itemsController.stream,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            if (snapshot.data is Fetching) {
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            } else if (snapshot.data is Fetched) {
+              // データ取得完了
+              return _soundListBox(context);
+            }
+          }
+        },
+      )),
       // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+
+  /**
+   * 音声一覧を表示
+   */
+  Widget _soundListBox(BuildContext context) {
+    return listSounds == null
+        ? Container()
+        : ListView.builder(
+            itemCount: listSounds.length,
+            itemBuilder: (context, index) {
+              if (isLoading && index == listWork.length) {
+                // データ取得中
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else {
+                return _buildSoundItem(index, context);
+              }
+            },
+            controller: _scrollController);
+  }
+
+  /**
+   * 一覧の音のアイテム
+   * 
+   */
+  Widget _buildSoundItem(int index, BuildContext context) {
+    var sound = listSounds[index];
+
+    return InkWell(
+        onTap: () {
+          Navigator.of(context).push<Widget>(
+            MaterialPageRoute(
+              builder: (context) {},
+            ),
+          );
+        },
+        child: Card(
+          child: _makeEachRow(sound, context),
+          margin: const EdgeInsets.all(1.0),
+        ));
+  }
+
+  /**
+   * 各行の音アイテム設定
+   */
+  Widget _makeEachRow(dynamic sound, BuildContext context) {
+    return Container(
+      color: Colors.white,
+      height: 50.0,
+      child: Center(child: Text(sound['title'])),
     );
   }
 
@@ -98,5 +144,7 @@ class _TopPageState extends State<TopPage> {
 
     // APIから取得した求人データ
     listSounds = json.decode(response.body);
+
+    _itemsController.add(Fetched());
   }
 }
