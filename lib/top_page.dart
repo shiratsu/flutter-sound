@@ -83,14 +83,7 @@ class _TopPageState extends State<TopPage> {
         : ListView.builder(
             itemCount: listSounds.length,
             itemBuilder: (context, index) {
-              if (isLoading && index == listWork.length) {
-                // データ取得中
-                return Center(
-                  child: CircularProgressIndicator(),
-                );
-              } else {
-                return _buildSoundItem(index, context);
-              }
+              return _buildSoundItem(index, context);
             },
             controller: _scrollController);
   }

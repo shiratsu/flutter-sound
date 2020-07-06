@@ -41,5 +41,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
+    <key>envKey</key>
+    <string>${ENV_KEY}</string>
 </dict>
 </plist>
