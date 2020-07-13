@@ -139,8 +139,8 @@ class _TopPageState extends State<TopPage> {
     print("通信できたよ〜〜");
 
     // APIから取得した求人データ
-    listSounds = json.decode(response.body);
-
+    Map<String, dynamic> mapSound = json.decode(response.body);
+    listSounds = mapSound["SoundList"];
     _itemsController.add(Fetched());
   }
 }
