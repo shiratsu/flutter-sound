@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_admob/firebase_admob.dart';
+// import 'package:firebase_admob/firebase_admob.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -34,6 +34,7 @@ class _TopPageState extends State<TopPage> {
   @override
   void initState() {
     super.initState();
+    _itemsController = StreamController();
     _itemsController.add(Fetching());
     requestSoundList();
   }
@@ -124,6 +125,8 @@ class _TopPageState extends State<TopPage> {
    * 音源一覧を取得
    */
   Future<void> requestSoundList() async {
+    print(DotEnv().env['SOUND_LIST_URL_BASE']);
+    print(DotEnv().env['SOUND_LIST_URL']);
     String strListUrl =
         DotEnv().env['SOUND_LIST_URL_BASE'] + DotEnv().env['SOUND_LIST_URL'];
 

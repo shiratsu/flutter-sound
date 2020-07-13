@@ -9,7 +9,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 String strCustomUserAgent = '';
 
-void main() => runApp(MyApp());
+void main() async {
+  await DotEnv().load('.env');
+  runApp(MyApp());
+}
 
 class MyApp extends StatefulWidget {
   @override

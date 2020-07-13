@@ -58,18 +58,24 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             dimention: "default"
-            manifestPlaceholders = [admob-app-id: System.getenv("ADMOB-APP-PROD")]
+            manifestPlaceholders = [admobAppId: System.getenv("ADMOB_APP_PROD")]
         }
         debug {
+            dimension "default"
+            applicationIdSuffix ".dev"
+            versionNameSuffix ".dev"
             minifyEnabled false
             signingConfig signingConfigs.debug
             //manifestPlaceholders = [label: "testlabel"] #ベタ書きの例、これでも動くが...
-            manifestPlaceholders = [admob-app-id: System.getenv("ADMOB-APP-DEV")]
+            manifestPlaceholders = [admobAppId: System.getenv("ADMOB_APP_DEV")]
         }
         stg {
+            dimension "default"
+            applicationIdSuffix ".stg"
+            versionNameSuffix ".stg"
             minifyEnabled false
             //manifestPlaceholders = [label: "testlabel"] #ベタ書きの例、これでも動くが...
-            manifestPlaceholders = [admob-app-id: System.getenv("ADMOB-APP-STG")]
+            manifestPlaceholders = [admobAppId: System.getenv("ADMOB_APP_STG")]
         }
     }
 }
@@ -83,5 +89,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'com.google.firebase:firebase-core:17.2.2'
     implementation 'com.google.firebase:firebase-analytics:17.2.2'
 }

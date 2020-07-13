@@ -21,10 +21,14 @@
 		F34FF0A424B35DC000CAE04E /* GoogleService-Info-prod.plist in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0A124B35DBF00CAE04E /* GoogleService-Info-prod.plist */; };
 		F34FF0A524B35DC000CAE04E /* GoogleService-Info-stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0A224B35DBF00CAE04E /* GoogleService-Info-stg.plist */; };
 		F34FF0A624B35DC000CAE04E /* GoogleService-Info-dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0A324B35DC000CAE04E /* GoogleService-Info-dev.plist */; };
-		F34FF0AB24B3698F00CAE04E /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0AA24B3698F00CAE04E /* Development.xcconfig */; };
-		F34FF0AC24B3699600CAE04E /* Debug-Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0A724B3678B00CAE04E /* Debug-Development.xcconfig */; };
-		F34FF0AD24B3699900CAE04E /* Release-Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0A824B367C200CAE04E /* Release-Staging.xcconfig */; };
-		F34FF0AE24B3699C00CAE04E /* Release-Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0A924B367F300CAE04E /* Release-Production.xcconfig */; };
+		F34FF0B724BBC14100CAE04E /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9740EEB21CF90195004384FC /* Debug.xcconfig */; };
+		F34FF0B824BBC14400CAE04E /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */; };
+		F34FF0C024BBC29A00CAE04E /* Release-Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0BA24BBC29A00CAE04E /* Release-Staging.xcconfig */; };
+		F34FF0C124BBC29A00CAE04E /* Debug-Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0BB24BBC29A00CAE04E /* Debug-Development.xcconfig */; };
+		F34FF0C224BBC29A00CAE04E /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0BC24BBC29A00CAE04E /* Development.xcconfig */; };
+		F34FF0C324BBC29A00CAE04E /* Release-Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0BD24BBC29A00CAE04E /* Release-Production.xcconfig */; };
+		F34FF0C424BBC29A00CAE04E /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0BE24BBC29A00CAE04E /* Production.xcconfig */; };
+		F34FF0C524BBC29A00CAE04E /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0BF24BBC29A00CAE04E /* Staging.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +52,8 @@
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		1844E171712D1BB84CD5F574 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
+		284C0A8C7C6DF840C34FF14A /* Pods-Runner.debug-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-development.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-development.xcconfig"; sourceTree = "<group>"; };
+		2EE4C87D4938550C533CDB6D /* Pods-Runner.release-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-staging.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-staging.xcconfig"; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
 		3B80C3931E831B6300D905FE /* App.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = App.framework; path = Flutter/App.framework; sourceTree = "<group>"; };
 		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -61,16 +67,17 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBA9659673647B558E4E7C3F /* Pods-Runner.release-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-production.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-production.xcconfig"; sourceTree = "<group>"; };
 		D900A469B8C7B861722C5563 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		F34FF0A124B35DBF00CAE04E /* GoogleService-Info-prod.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-prod.plist"; sourceTree = "<group>"; };
 		F34FF0A224B35DBF00CAE04E /* GoogleService-Info-stg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-stg.plist"; sourceTree = "<group>"; };
 		F34FF0A324B35DC000CAE04E /* GoogleService-Info-dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-dev.plist"; sourceTree = "<group>"; };
-		F34FF0A724B3678B00CAE04E /* Debug-Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Debug-Development.xcconfig"; sourceTree = "<group>"; };
-		F34FF0A824B367C200CAE04E /* Release-Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release-Staging.xcconfig"; sourceTree = "<group>"; };
-		F34FF0A924B367F300CAE04E /* Release-Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release-Production.xcconfig"; sourceTree = "<group>"; };
-		F34FF0AA24B3698F00CAE04E /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
-		F34FF0AF24B36A3C00CAE04E /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
-		F34FF0B024B36AD700CAE04E /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		F34FF0BA24BBC29A00CAE04E /* Release-Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Release-Staging.xcconfig"; path = "Flutter/Release-Staging.xcconfig"; sourceTree = "<group>"; };
+		F34FF0BB24BBC29A00CAE04E /* Debug-Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Debug-Development.xcconfig"; path = "Flutter/Debug-Development.xcconfig"; sourceTree = "<group>"; };
+		F34FF0BC24BBC29A00CAE04E /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Development.xcconfig; path = Flutter/Development.xcconfig; sourceTree = "<group>"; };
+		F34FF0BD24BBC29A00CAE04E /* Release-Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Release-Production.xcconfig"; path = "Flutter/Release-Production.xcconfig"; sourceTree = "<group>"; };
+		F34FF0BE24BBC29A00CAE04E /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Production.xcconfig; path = Flutter/Production.xcconfig; sourceTree = "<group>"; };
+		F34FF0BF24BBC29A00CAE04E /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Staging.xcconfig; path = Flutter/Staging.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +100,9 @@
 				D900A469B8C7B861722C5563 /* Pods-Runner.debug.xcconfig */,
 				1844E171712D1BB84CD5F574 /* Pods-Runner.release.xcconfig */,
 				11D7C4639C50DA2568C11C7A /* Pods-Runner.profile.xcconfig */,
+				284C0A8C7C6DF840C34FF14A /* Pods-Runner.debug-development.xcconfig */,
+				CBA9659673647B558E4E7C3F /* Pods-Runner.release-production.xcconfig */,
+				2EE4C87D4938550C533CDB6D /* Pods-Runner.release-staging.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -108,6 +118,12 @@
 		9740EEB11CF90186004384FC /* Flutter */ = {
 			isa = PBXGroup;
 			children = (
+				F34FF0BB24BBC29A00CAE04E /* Debug-Development.xcconfig */,
+				F34FF0BC24BBC29A00CAE04E /* Development.xcconfig */,
+				F34FF0BE24BBC29A00CAE04E /* Production.xcconfig */,
+				F34FF0BD24BBC29A00CAE04E /* Release-Production.xcconfig */,
+				F34FF0BA24BBC29A00CAE04E /* Release-Staging.xcconfig */,
+				F34FF0BF24BBC29A00CAE04E /* Staging.xcconfig */,
 				F34FF0A324B35DC000CAE04E /* GoogleService-Info-dev.plist */,
 				F34FF0A124B35DBF00CAE04E /* GoogleService-Info-prod.plist */,
 				F34FF0A224B35DBF00CAE04E /* GoogleService-Info-stg.plist */,
@@ -117,12 +133,6 @@
 				9740EEB21CF90195004384FC /* Debug.xcconfig */,
 				7AFA3C8E1D35360C0083082E /* Release.xcconfig */,
 				9740EEB31CF90195004384FC /* Generated.xcconfig */,
-				F34FF0A724B3678B00CAE04E /* Debug-Development.xcconfig */,
-				F34FF0A824B367C200CAE04E /* Release-Staging.xcconfig */,
-				F34FF0A924B367F300CAE04E /* Release-Production.xcconfig */,
-				F34FF0AA24B3698F00CAE04E /* Development.xcconfig */,
-				F34FF0AF24B36A3C00CAE04E /* Production.xcconfig */,
-				F34FF0B024B36AD700CAE04E /* Staging.xcconfig */,
 			);
 			name = Flutter;
 			sourceTree = "<group>";
@@ -234,15 +244,19 @@
 			files = (
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
 				F34FF0A624B35DC000CAE04E /* GoogleService-Info-dev.plist in Resources */,
-				F34FF0AD24B3699900CAE04E /* Release-Staging.xcconfig in Resources */,
+				F34FF0B824BBC14400CAE04E /* Release.xcconfig in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
 				F34FF0A524B35DC000CAE04E /* GoogleService-Info-stg.plist in Resources */,
-				F34FF0AE24B3699C00CAE04E /* Release-Production.xcconfig in Resources */,
-				F34FF0AC24B3699600CAE04E /* Debug-Development.xcconfig in Resources */,
+				F34FF0C424BBC29A00CAE04E /* Production.xcconfig in Resources */,
+				F34FF0C124BBC29A00CAE04E /* Debug-Development.xcconfig in Resources */,
+				F34FF0C524BBC29A00CAE04E /* Staging.xcconfig in Resources */,
+				F34FF0C224BBC29A00CAE04E /* Development.xcconfig in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
+				F34FF0B724BBC14100CAE04E /* Debug.xcconfig in Resources */,
 				F34FF0A424B35DC000CAE04E /* GoogleService-Info-prod.plist in Resources */,
-				F34FF0AB24B3698F00CAE04E /* Development.xcconfig in Resources */,
+				F34FF0C024BBC29A00CAE04E /* Release-Staging.xcconfig in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
+				F34FF0C324BBC29A00CAE04E /* Release-Production.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +364,7 @@
 /* Begin XCBuildConfiguration section */
 		249021D3217E4FDB00AE95B9 /* Profile */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
+			baseConfigurationReference = F34FF0BA24BBC29A00CAE04E /* Release-Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -401,8 +415,9 @@
 		};
 		249021D4217E4FDB00AE95B9 /* Profile */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
+			baseConfigurationReference = F34FF0BA24BBC29A00CAE04E /* Release-Staging.xcconfig */;
 			buildSettings = {
+				ADMOB_APP_ID = "1:944710506543:ios:c9d26b30f06f3eefad4eda";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
@@ -413,6 +428,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -422,6 +438,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Profile;
@@ -484,7 +501,7 @@
 		};
 		97C147041CF9000F007C117D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
+			baseConfigurationReference = F34FF0BD24BBC29A00CAE04E /* Release-Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -538,6 +555,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
 			buildSettings = {
+				ADMOB_APP_ID = "1:944710506543:ios:c9d26b30f06f3eefad4eda";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
@@ -548,6 +566,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -558,14 +577,16 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		97C147071CF9000F007C117D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
+			baseConfigurationReference = F34FF0BD24BBC29A00CAE04E /* Release-Production.xcconfig */;
 			buildSettings = {
+				ADMOB_APP_ID = "1:944710506543:ios:c9ddc9946be91730ad4eda";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
@@ -577,6 +598,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -586,13 +608,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		F34FF0B124B36D6400CAE04E /* Debug-Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F34FF0A724B3678B00CAE04E /* Debug-Development.xcconfig */;
+			baseConfigurationReference = F34FF0BB24BBC29A00CAE04E /* Debug-Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -648,8 +671,9 @@
 		};
 		F34FF0B224B36D6400CAE04E /* Debug-Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F34FF0A724B3678B00CAE04E /* Debug-Development.xcconfig */;
+			baseConfigurationReference = F34FF0BB24BBC29A00CAE04E /* Debug-Development.xcconfig */;
 			buildSettings = {
+				ADMOB_APP_ID = "1:944710506543:ios:c9d26b30f06f3eefad4eda";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
@@ -662,6 +686,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -672,13 +697,14 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = "Debug-Development";
 		};
 		F34FF0B324B36D8000CAE04E /* Release-Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F34FF0A824B367C200CAE04E /* Release-Staging.xcconfig */;
+			baseConfigurationReference = F34FF0BA24BBC29A00CAE04E /* Release-Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -730,8 +756,9 @@
 		};
 		F34FF0B424B36D8000CAE04E /* Release-Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F34FF0A824B367C200CAE04E /* Release-Staging.xcconfig */;
+			baseConfigurationReference = F34FF0BA24BBC29A00CAE04E /* Release-Staging.xcconfig */;
 			buildSettings = {
+				ADMOB_APP_ID = "1:944710506543:ios:c9d26b30f06f3eefad4eda";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
@@ -744,6 +771,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -753,13 +781,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = "Release-Staging";
 		};
 		F34FF0B524B36E0A00CAE04E /* Release-Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F34FF0A924B367F300CAE04E /* Release-Production.xcconfig */;
+			baseConfigurationReference = F34FF0BD24BBC29A00CAE04E /* Release-Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -811,8 +840,9 @@
 		};
 		F34FF0B624B36E0A00CAE04E /* Release-Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F34FF0A924B367F300CAE04E /* Release-Production.xcconfig */;
+			baseConfigurationReference = F34FF0BD24BBC29A00CAE04E /* Release-Production.xcconfig */;
 			buildSettings = {
+				ADMOB_APP_ID = "1:944710506543:ios:c9ddc9946be91730ad4eda";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
@@ -825,6 +855,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -834,6 +865,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = "Release-Production";
