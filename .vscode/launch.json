@@ -2,15 +2,16 @@
   // Use IntelliSense to learn about possible attributes.
   // Hover to view descriptions of existing attributes.
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-  "dart.env": {
-    "LANG": "en-US.UTF-8"
-  },
+
   "version": "0.2.0",
   "configurations": [
     {
       "name": "Flutter",
       "request": "launch",
       "type": "dart",
+      "env": {
+        "LANG": "en_US.UTF-8"
+      },
       "args": ["--target", "lib/main.dart", "--flavor", "Development"]
     }
   ]
