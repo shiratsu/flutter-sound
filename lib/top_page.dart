@@ -6,6 +6,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'dart:convert';
 import 'dart:async';
 import 'stream.dart';
+import 'sound_page.dart';
 
 class TopPage extends StatefulWidget {
   TopPage({Key key, this.title}) : super(key: key);
@@ -100,7 +101,12 @@ class _TopPageState extends State<TopPage> {
         onTap: () {
           Navigator.of(context).push<Widget>(
             MaterialPageRoute(
-              builder: (context) {},
+              builder: (context) {
+                return SoundPage(
+                  title: sound['title'],
+                  strUrlKey: sound["sound_key"],
+                );
+              },
             ),
           );
         },
