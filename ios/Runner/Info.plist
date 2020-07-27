@@ -20,6 +20,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>GADApplicationIdentifier</key>
+	<string>${ADMOB_APP_ID}</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -41,11 +43,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-    <key>UIMainStoryboardFile</key>
-    <string>Main</string>
-    <key>envKey</key>
-    <string>${ENV_KEY}</string>
-    <key>GADApplicationIdentifier</key>
-    <string>${ADMOB_APP_ID}</string>
+	<key>envKey</key>
+	<string>${ENV_KEY}</string>
 </dict>
 </plist>
