@@ -1,6 +1,0 @@
-framework module flutter_user_agent {
-  umbrella header "flutter_user_agent-umbrella.h"
-
-  export *
-  module * { export * }
-}
