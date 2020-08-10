@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "leafy-sunrise-280512",
+  "private_key_id": "aeeafc06bed03e91358fe2360b0eadf769243d8a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDvEACIw+w9Gm0q\nOn3Vq3QoERHbfIQ6HhmbjvOWgdZipf0uhY3H9lBR+yq/agSzhA2XciDr+aEj8+AT\n9G8tJHuPS6N/hDl2TY2p+OEpiPjHYmJtWnlkkZApEeczWz3U9jIFL/5ouGkpgtaa\n29GV8HxxMB9hGah0RDoOxLNNFL1c+nP+meRyD/eM7bAEX8jlbjPSHlaCh99uS1SU\nzW80DNCIxlRPprfLjAYI4gpk4UWIqdGa8TVfTdkpsm3oGidCfZLYjheRHEBRpXto\nRMkatyfmjb5NgBUr4rKVLdbYwoaVsag3GGefO4TzxyJFModTueYRu/lD05nUYC28\nLhoT5I8zAgMBAAECggEACAZpfi3ViFeSwpAkGUAgLhgkmVGcvraz9VzfIHZLVBRu\nY1loYQYLvDTKQpK0hbIxIpxaLpG6rxJIu2LBOKq42x6W5njx1N7VmpcYN+S5NThA\nRZt757xbMoW/VSIC+VsqYrIxwCIwpYwW2Cv45SelhccvxnquBPklWcmQm03O7YgK\nMJZOdWFUJPnzHrYMPkwjmALbBF2wkNTme2NyZu3jQmubqPlvhQ8ArodZ50uD3Y7Y\nd/b7sueYSiF9SicfFYd0C7RGKhugdXu+Tn/G1atjusejEfYKlHnzYKxhD9dftvWf\ne+OA1bHHdD/VmwRUtuRyGmunPVEtJqOQmDFZeRqPAQKBgQD6ExwvdLcq+OYNTD2Z\nUR9OSzlBDVxhJFufu8UhaEJ0zwM+TllK9/gyFsx28ATzbBziYYDrIfxu1BD3Pygr\nxT6YrN+fOnveYGgJcIqUXhH7EO1Gz+zyrsUZUPaPedKHyrlp0+egrszh/Gsp5IQh\n5xiQYXLYSqe+MwUGZiODunv/UQKBgQD0uhhZVOCI0bEMxBl2wPKEOr2iHZULBzSs\nb52BpoU3YmNs+jFwua8WU9NuYK5WpCXVTB7f5W3m4CEQxFv2SyWo0GpL19B9vY0P\n9hatHxARHsbiW+7ELIe9RD6GLnrAnao6fOiMJw05EnA8AJKAC65AaN3hjv/RaWsR\nfOnPx7etQwKBgQC4Ah3IMYqh/RlSCZp92Po/IwzS+CDUfetJYuIPzeawiq6pRv9f\nMY0YVjxG/B+4egHa9cHlwlE7v6FoPLmzU2TW9MVrJZ6Fp8yFvaDKwVlbsz3U0CRb\nAgyXr0Jtmkc2kg3SeBFE47pwQssbvUEYrTIe8wWNb4l0Y5g7+CYDxNF+sQKBgDrF\nsnFJs/7HtShms+LUJanh3YbgadnTKjA7Qe1QC3Aonc4fK95xiX3oNb+tUlEWbMuT\n01pb5A/tRaOcNKWqmGm5W73JH5YC/qyVog6Dhj1GUecswuOz+glXKVjaMrqtYqNX\nOhXmjwNkzTVrwcMkiv2G8bpouEEXexIhGJnA0fi3AoGBAIbW+lvXX4dgUmx02Sek\nAh0KyOtEiJCJd1Cc7QYKeXTOEmKf1YCTkCSDdcgcVjKeqsOUHNXi9T8U94Kr86tn\n4pOcEb+X7yPcV4FbYhGbyWlSawCOXyZ9Du+J4+O3SRRA2Y4RRrSt24VvLFw520Wo\nVw5Sqzgpu37oCOw9rWuMxYHv\n-----END PRIVATE KEY-----\n",
+  "client_email": "hiratsuka-test@leafy-sunrise-280512.iam.gserviceaccount.com",
+  "client_id": "113293519399065183954",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hiratsuka-test%40leafy-sunrise-280512.iam.gserviceaccount.com"
+}
