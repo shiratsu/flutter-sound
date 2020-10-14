@@ -5,7 +5,6 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:flutter_user_agent/flutter_user_agent.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:io';
 import 'package:googleapis_auth/auth_io.dart' as auth;
 import 'package:http/http.dart' as http;
@@ -33,6 +32,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     initUserAgentState();
+    // _loginGcloud();
   }
 
   // This widget is the root of your application.

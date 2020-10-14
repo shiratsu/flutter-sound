@@ -25,8 +25,10 @@ dependencies:
   cupertino_icons: ^0.1.2
   audio_service: ^0.13.0
   flutter_dotenv: ^2.1.0
-  flutter_tts: ^1.2.6
-  just_audio: ^0.3.1
+  path_provider: ^1.1.0
+  path_provider_macos: ^0.0.1
+  audioplayers: ^0.16.1
+  provider: ^3.0.0+1
   http: ^0.12.1
   # firebase_admob: ^0.9.3+2
   shared_preferences: ^0.5.7+3
