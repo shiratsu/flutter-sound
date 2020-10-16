@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
 import 'top_page.dart';
-import 'dart:async';
+import 'sound_page.dart';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_user_agent/flutter_user_agent.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'dart:io';
 import 'package:googleapis_auth/auth_io.dart' as auth;
-import 'package:http/http.dart' as http;
-import 'package:gcloud/db.dart';
-import 'package:gcloud/storage.dart';
-import 'package:gcloud/pubsub.dart';
-import 'package:gcloud/service_scope.dart' as ss;
-import 'package:gcloud/src/datastore_impl.dart' as datastore_impl;
 
 String strCustomUserAgent = '';
 var client;
@@ -52,22 +46,9 @@ class _MyAppState extends State<MyApp> {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: TopPage(title: '音源一覧'),
+      // home: TopPage(title: '音源一覧'),
+      home: SoundPage(),
     );
-  }
-
-  void _loginGcloud() async {
-    // Read the service account credentials from the file.
-    var jsonCredentials = new File('hiratsuka-gcp.json').readAsStringSync();
-    var credentials =
-        new auth.ServiceAccountCredentials.fromJson(jsonCredentials);
-
-    // Get an HTTP authenticated client using the service account credentials.
-    var scopes = []
-      ..addAll(datastore_impl.DatastoreImpl.SCOPES)
-      ..addAll(Storage.SCOPES)
-      ..addAll(PubSub.SCOPES);
-    client = await auth.clientViaServiceAccount(credentials, scopes);
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.

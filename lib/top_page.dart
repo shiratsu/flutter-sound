@@ -103,9 +103,9 @@ class _TopPageState extends State<TopPage> {
             MaterialPageRoute(
               builder: (context) {
                 return SoundPage(
-                  title: sound['title'],
-                  strUrlKey: sound["sound_key"],
-                );
+                    // title: sound['title'],
+                    // strUrlKey: sound["sound_key"],
+                    );
               },
             ),
           );

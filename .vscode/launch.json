@@ -12,7 +12,7 @@
       "env": {
         "LANG": "en_US.UTF-8"
       },
-      "args": ["--target", "lib/main.dart", "--flavor", "Development"]
+      "args": ["--target", "lib/main.dart", "--flavor", "Development","--verbose"]
     }
   ]
 }
