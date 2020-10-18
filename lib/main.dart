@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'top_page.dart';
 import 'sound_page.dart';
+import 'one_sound_page.dart';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_user_agent/flutter_user_agent.dart';
@@ -47,7 +48,7 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
       ),
       // home: TopPage(title: '音源一覧'),
-      home: SoundPage(),
+      home: OneSoundPage(),
     );
   }
 
