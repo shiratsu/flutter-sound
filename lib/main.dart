@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'top_page.dart';
-import 'sound_page.dart';
+import '.env.dart' as env;
 import 'one_sound_page.dart';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_user_agent/flutter_user_agent.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'dart:io';
-import 'package:googleapis_auth/auth_io.dart' as auth;
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'firebase_handle.dart';
 
 String strCustomUserAgent = '';
 var client;
 
 void main() async {
   await DotEnv().load('.env');
+  setupLocator();
   runApp(MyApp());
 }
 

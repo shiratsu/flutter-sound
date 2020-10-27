@@ -9,6 +9,10 @@ import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/src/foundation/constants.dart';
 import 'player_widget.dart';
+import 'package:mvc_pattern/mvc_pattern.dart';
+import 'fetch_state.dart';
+
+import 'con.dart';
 
 typedef void OnError(Exception exception);
 
@@ -19,14 +23,24 @@ const kUrl3 = 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1xtra_mf_p';
 class OneSoundPage extends StatefulWidget {
   // final String title;
   // final String strUrlKey;
+  const OneSoundPage({Key key, this.soundPath}) : super(key: key);
+
+  final String soundPath;
 
   @override
   _OneSoundPageState createState() => _OneSoundPageState();
 }
 
-class _OneSoundPageState extends State<OneSoundPage> {
+class _OneSoundPageState extends StateMVC<OneSoundPage> {
+  _OneSoundPageState() : super(Con()) {
+    con = controller;
+  }
+  Con con;
+
   AudioCache audioCache = AudioCache();
   AudioPlayer advancedPlayer = AudioPlayer();
+
+  StreamController _soundController;
 
   @override
   void initState() {
@@ -36,12 +50,19 @@ class _OneSoundPageState extends State<OneSoundPage> {
       // Calls to Platform.isIOS fails on web
       return;
     }
+
+    _soundController = StreamController.broadcast();
+
     if (Platform.isIOS) {
       if (audioCache.fixedPlayer != null) {
         audioCache.fixedPlayer.startHeadlessService();
       }
       advancedPlayer.startHeadlessService();
     }
+
+    _soundController.add(Fetching());
+    con.downLoadSound(widget.soundPath);
+    _soundController.add(Fetched());
   }
 
   Widget remoteUrl() {

@@ -33,9 +33,10 @@ dependencies:
   # firebase_admob: ^0.9.3+2
   shared_preferences: ^0.5.7+3
   flutter_user_agent: ^1.2.2
-  gcloud: ^0.7.3
-  googleapis: any
-  googleapis_auth: any
+  firebase_storage: # new!
+  firebase_core: # new!
+  mvc_pattern: # new!
+  get_it: # new!
 
 dev_dependencies:
   flutter_test:

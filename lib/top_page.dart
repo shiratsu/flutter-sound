@@ -7,6 +7,7 @@ import 'dart:convert';
 import 'dart:async';
 import 'stream.dart';
 import 'sound_page.dart';
+import 'config/sound_define.dart';
 
 class TopPage extends StatefulWidget {
   TopPage({Key key, this.title}) : super(key: key);
@@ -30,14 +31,19 @@ class _TopPageState extends State<TopPage> {
   StreamController _itemsController;
   ScrollController _scrollController = new ScrollController();
 
-  List<dynamic> listSounds = [];
+  List<Map<String, String>> soundList = [
+    {
+      "title": "",
+      "imagePath": "",
+    }
+  ];
 
   @override
   void initState() {
     super.initState();
-    _itemsController = StreamController();
-    _itemsController.add(Fetching());
-    requestSoundList();
+    // _itemsController = StreamController();
+    // _itemsController.add(Fetching());
+    // // requestSoundList();
   }
 
   @override
@@ -57,21 +63,7 @@ class _TopPageState extends State<TopPage> {
       body: Center(
           // Center is a layout widget. It takes a single child and positions it
           // in the middle of the parent.
-          child: StreamBuilder(
-        stream: _itemsController.stream,
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            if (snapshot.data is Fetching) {
-              return Center(
-                child: CircularProgressIndicator(),
-              );
-            } else if (snapshot.data is Fetched) {
-              // データ取得完了
-              return _soundListBox(context);
-            }
-          }
-        },
-      )),
+          child: _soundListBox(context)),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
@@ -80,73 +72,25 @@ class _TopPageState extends State<TopPage> {
    * 音声一覧を表示
    */
   Widget _soundListBox(BuildContext context) {
-    return listSounds == null
+    return soundList == null
         ? Container()
-        : ListView.builder(
-            itemCount: listSounds.length,
-            itemBuilder: (context, index) {
-              return _buildSoundItem(index, context);
-            },
-            controller: _scrollController);
+        : GridView.count(crossAxisCount: 2, children: _makeSoundsWidget());
   }
 
-  /**
-   * 一覧の音のアイテム
-   * 
-   */
-  Widget _buildSoundItem(int index, BuildContext context) {
-    var sound = listSounds[index];
-
-    return InkWell(
-        onTap: () {
-          Navigator.of(context).push<Widget>(
-            MaterialPageRoute(
-              builder: (context) {
-                return SoundPage(
-                    // title: sound['title'],
-                    // strUrlKey: sound["sound_key"],
-                    );
-              },
-            ),
-          );
-        },
-        child: Card(
-          child: _makeEachRow(sound, context),
-          margin: const EdgeInsets.all(1.0),
-        ));
-  }
-
-  /**
-   * 各行の音アイテム設定
-   */
-  Widget _makeEachRow(dynamic sound, BuildContext context) {
-    return Container(
-      color: Colors.white,
-      height: 50.0,
-      child: Center(child: Text(sound['title'])),
-    );
-  }
-
-  /**
-   * 音源一覧を取得
-   */
-  Future<void> requestSoundList() async {
-    print(DotEnv().env['SOUND_LIST_URL_BASE']);
-    print(DotEnv().env['SOUND_LIST_URL']);
-    String strListUrl =
-        DotEnv().env['SOUND_LIST_URL_BASE'] + DotEnv().env['SOUND_LIST_URL'];
-
-    http.Response response = await http.get(strListUrl);
-    if (response.statusCode != 200) {
-      print("失敗だよ〜〜＞＜");
-      return;
+  /// 一覧を作成
+  List<Widget> _makeSoundsWidget() {
+    List<Widget> listWidgets = [];
+    for (var i = 0; i < soundList.length; i++) {
+      listWidgets
+          .add(_soundWidget(soundList[i]["imagePath"], soundList[i]["title"]));
     }
+    return listWidgets;
+  }
 
-    print("通信できたよ〜〜");
-
-    // APIから取得した求人データ
-    Map<String, dynamic> mapSound = json.decode(response.body);
-    listSounds = mapSound["SoundList"];
-    _itemsController.add(Fetched());
+  /// 一個一個のwidget
+  Widget _soundWidget(String strImagePath, String strTitle) {
+    return Column(
+      children: [Image(image: AssetImage(strImagePath)), Text(strTitle)],
+    );
   }
 }
