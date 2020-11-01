@@ -42,6 +42,8 @@ class _OneSoundPageState extends StateMVC<OneSoundPage> {
 
   StreamController _soundController;
 
+  String soundUrl = "";
+
   @override
   void initState() {
     super.initState();
@@ -59,13 +61,9 @@ class _OneSoundPageState extends StateMVC<OneSoundPage> {
       }
       advancedPlayer.startHeadlessService();
     }
-
-    _soundController.add(Fetching());
-    con.downLoadSound(widget.soundPath);
-    _soundController.add(Fetched());
   }
 
-  Widget remoteUrl() {
+  Widget _remoteUrl(String soundUrl) {
     return SingleChildScrollView(
       child: _Tab(children: [
         Text(
@@ -73,8 +71,24 @@ class _OneSoundPageState extends StateMVC<OneSoundPage> {
           key: Key('url1'),
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        PlayerWidget(url: kUrl1),
+        PlayerWidget(url: soundUrl),
       ]),
+    );
+  }
+
+  /// 非同期で音を取得する
+  Widget remoteUrlFuture() {
+    return FutureBuilder(
+      future: con.downLoadSound(widget.soundPath),
+      builder: (context, snapshot) {
+        // 非同期処理が完了している場合にWidgetの中身を呼び出す
+        if (snapshot.hasData) {
+          return _remoteUrl(snapshot.data);
+          // 非同期処理が未完了の場合にインジケータを表示する
+        } else {
+          return Center(child: CircularProgressIndicator());
+        }
+      },
     );
   }
 
@@ -121,7 +135,7 @@ class _OneSoundPageState extends StateMVC<OneSoundPage> {
             //     )
             //   ],
             // ),
-            body: remoteUrl()),
+            body: remoteUrlFuture()),
       ),
     );
   }

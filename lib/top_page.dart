@@ -6,7 +6,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'dart:convert';
 import 'dart:async';
 import 'stream.dart';
-import 'sound_page.dart';
+import 'one_sound_page.dart';
 import 'config/sound_define.dart';
 
 class TopPage extends StatefulWidget {
@@ -33,8 +33,9 @@ class _TopPageState extends State<TopPage> {
 
   List<Map<String, String>> soundList = [
     {
-      "title": "",
-      "imagePath": "",
+      "title": "hogehoge",
+      "imagePath": "assets/image001.png",
+      "soundPath": "brainrelax.mp3",
     }
   ];
 
@@ -81,16 +82,32 @@ class _TopPageState extends State<TopPage> {
   List<Widget> _makeSoundsWidget() {
     List<Widget> listWidgets = [];
     for (var i = 0; i < soundList.length; i++) {
-      listWidgets
-          .add(_soundWidget(soundList[i]["imagePath"], soundList[i]["title"]));
+      listWidgets.add(_soundWidget(soundList[i]["imagePath"],
+          soundList[i]["title"], soundList[i]["title"]));
     }
     return listWidgets;
   }
 
   /// 一個一個のwidget
-  Widget _soundWidget(String strImagePath, String strTitle) {
-    return Column(
-      children: [Image(image: AssetImage(strImagePath)), Text(strTitle)],
-    );
+  Widget _soundWidget(String strImagePath, String strTitle, String soundPath) {
+    return GestureDetector(
+        onTap: () {
+          MaterialPageRoute(
+            settings: RouteSettings(name: "SubAreaModule"),
+            builder: (context) {
+              return OneSoundPage(soundPath: soundPath);
+            },
+          );
+        },
+        child: Column(
+          children: [Image.asset(strImagePath), Text(strTitle)],
+          // children: [
+          //   Container(
+          //     width: 200,
+          //     height: 80,
+          //   ),
+          //   Text(strTitle)
+          // ],
+        ));
   }
 }

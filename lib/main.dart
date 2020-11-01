@@ -51,7 +51,12 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
       ),
       // home: TopPage(title: '音源一覧'),
-      home: OneSoundPage(),
+      // home: OneSoundPage(
+      //   soundPath: "brainrelax.mp3",
+      // ),
+      home: TopPage(
+        title: "音一覧",
+      ),
     );
   }
 

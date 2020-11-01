@@ -10,22 +10,38 @@ import 'package:get_it/get_it.dart';
 GetIt getIt = GetIt.instance;
 
 void setupLocator() async {
-  final FirebaseApp app = await myFirebaseApp();
-  // final FirebaseStorage storage =
-  //     FirebaseStorage(app: app, storageBucket: env.storageBucket);
+  print(Firebase.apps);
 
-  getIt.registerLazySingleton(
-      () => FirebaseStorage(app: app, storageBucket: env.storageBucket));
+  final FirebaseApp app = await myFirebaseApp();
+  final FirebaseStorage storage =
+      FirebaseStorage(app: app, storageBucket: env.storageBucket);
+
+  print(Firebase.apps);
+
+  getIt.registerLazySingleton(() => storage);
 }
 
-Future<FirebaseApp> myFirebaseApp() {
-  return FirebaseApp.configure(
-    name: env.firebaseName,
-    options: FirebaseOptions(
-      appId: Platform.isIOS ? env.iosGoogleAppID : env.androidGoogleAppID,
-      messagingSenderId: env.gcmSenderID,
-      apiKey: env.apiKey,
-      projectId: env.projectID,
-    ),
-  );
+Future<FirebaseApp> myFirebaseApp() async {
+  print(Firebase.apps);
+
+  // if (Firebase.app(env.firebaseName) != null) {
+  //   return Firebase.app(env.firebaseName);
+  //
+  var app;
+
+  try {
+    app = await Firebase.initializeApp(
+      name: env.firebaseName,
+      options: FirebaseOptions(
+        appId: Platform.isIOS ? env.iosGoogleAppID : env.androidGoogleAppID,
+        messagingSenderId: env.gcmSenderID,
+        apiKey: env.apiKey,
+        projectId: env.projectID,
+      ),
+    );
+  } catch (e) {
+    print(e);
+    app = Firebase.app(env.firebaseName);
+  }
+  return app;
 }
