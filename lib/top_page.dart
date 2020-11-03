@@ -35,7 +35,12 @@ class _TopPageState extends State<TopPage> {
     {
       "title": "hogehoge",
       "imagePath": "assets/image001.png",
-      "soundPath": "brainrelax.mp3",
+      "soundPath": "sound/brainrelax.mp3",
+    },
+    {
+      "title": "hogehoge",
+      "imagePath": "assets/image002.png",
+      "soundPath": "sound-with-p/brainrelax.mp3",
     }
   ];
 
@@ -83,31 +88,37 @@ class _TopPageState extends State<TopPage> {
     List<Widget> listWidgets = [];
     for (var i = 0; i < soundList.length; i++) {
       listWidgets.add(_soundWidget(soundList[i]["imagePath"],
-          soundList[i]["title"], soundList[i]["title"]));
+          soundList[i]["title"], soundList[i]["soundPath"]));
     }
     return listWidgets;
   }
 
   /// 一個一個のwidget
   Widget _soundWidget(String strImagePath, String strTitle, String soundPath) {
-    return GestureDetector(
+    return InkWell(
         onTap: () {
-          MaterialPageRoute(
-            settings: RouteSettings(name: "SubAreaModule"),
-            builder: (context) {
-              return OneSoundPage(soundPath: soundPath);
-            },
+          Navigator.of(context).push<Widget>(
+            MaterialPageRoute(
+              settings: RouteSettings(name: 'OneSoundPage'), // webページ
+              builder: (context) {
+                return OneSoundPage(soundPath: soundPath);
+              },
+            ),
           );
         },
-        child: Column(
-          children: [Image.asset(strImagePath), Text(strTitle)],
-          // children: [
-          //   Container(
-          //     width: 200,
-          //     height: 80,
-          //   ),
-          //   Text(strTitle)
-          // ],
+        child: Container(
+          // width: 100,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Image.asset(
+                strImagePath,
+                height: 150,
+              ),
+              Text(strTitle)
+            ],
+          ),
         ));
   }
 }

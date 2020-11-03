@@ -16,7 +16,7 @@ void setupLocator() async {
   final FirebaseStorage storage =
       FirebaseStorage(app: app, storageBucket: env.storageBucket);
 
-  print(Firebase.apps);
+  // print(Firebase.apps);
 
   getIt.registerLazySingleton(() => storage);
 }

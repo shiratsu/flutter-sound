@@ -12,7 +12,7 @@ class Model {
   /// firebaseからDLする
   Future<String> downLoadFile(String objPath) async {
     // download path
-    StorageReference ref = storage.ref().child('sound/$objPath');
+    StorageReference ref = storage.ref().child(objPath);
     final String url = await ref.getDownloadURL();
     return url;
   }
