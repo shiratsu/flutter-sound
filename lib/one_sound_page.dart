@@ -23,9 +23,10 @@ const kUrl3 = 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1xtra_mf_p';
 class OneSoundPage extends StatefulWidget {
   // final String title;
   // final String strUrlKey;
-  const OneSoundPage({Key key, this.soundPath}) : super(key: key);
+  const OneSoundPage({Key key, this.soundPath, this.title}) : super(key: key);
 
   final String soundPath;
+  final String title;
 
   @override
   _OneSoundPageState createState() => _OneSoundPageState();
@@ -124,7 +125,7 @@ class _OneSoundPageState extends StateMVC<OneSoundPage> {
         length: 5,
         child: Scaffold(
             appBar: AppBar(
-              title: Text('audioplayers Example'),
+              title: Text(widget.title),
             ),
             // body: TabBarView(
             //   children: [

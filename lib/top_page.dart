@@ -101,7 +101,10 @@ class _TopPageState extends State<TopPage> {
             MaterialPageRoute(
               settings: RouteSettings(name: 'OneSoundPage'), // webページ
               builder: (context) {
-                return OneSoundPage(soundPath: soundPath);
+                return OneSoundPage(
+                  soundPath: soundPath,
+                  title: strTitle,
+                );
               },
             ),
           );
