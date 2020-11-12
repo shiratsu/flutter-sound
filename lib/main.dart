@@ -10,6 +10,7 @@ import 'dart:io';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'firebase_handle.dart';
+import 'common/color_helper.dart';
 
 String strCustomUserAgent = '';
 var client;
@@ -48,7 +49,10 @@ class _MyAppState extends State<MyApp> {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: soundSwatch,
+        primaryTextTheme:
+            Theme.of(context).primaryTextTheme.apply(bodyColor: Colors.white),
+        // primarySwatch: Colors.blue,
       ),
       // home: TopPage(title: '音源一覧'),
       // home: OneSoundPage(

@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
 enum PlayerState { stopped, playing, paused }
 enum PlayingRouteState { speakers, earpiece }
@@ -24,6 +25,8 @@ class PlayerWidget extends StatefulWidget {
 class _PlayerWidgetState extends State<PlayerWidget> {
   String url;
   PlayerMode mode;
+
+  final baseColor = Color.fromRGBO(255, 255, 255, 0.3);
 
   AudioPlayer _audioPlayer;
   AudioPlayerState _audioPlayerState;
@@ -53,6 +56,14 @@ class _PlayerWidgetState extends State<PlayerWidget> {
   void initState() {
     super.initState();
     _initAudioPlayer();
+  }
+
+  void _updateLabels(int init, int end, int laps) {
+    setState(() {
+      // inBedTime = init;
+      // outBedTime = end;
+      // days = laps;
+    });
   }
 
   @override
@@ -126,6 +137,13 @@ class _PlayerWidgetState extends State<PlayerWidget> {
                         ? _position.inMilliseconds / _duration.inMilliseconds
                         : 0.0,
                   ),
+                  SleekCircularSlider(
+                      appearance: CircularSliderAppearance(),
+                      onChange: (double value) {
+                        final Position = value * _duration.inMilliseconds;
+                        _audioPlayer
+                          .seek(Duration(milliseconds: Position.round()));
+                      });
                 ],
               ),
             ),

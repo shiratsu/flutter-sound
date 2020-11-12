@@ -48,5 +48,8 @@
 	<false/>
 	<key>envKey</key>
 	<string>${ENV_KEY}</string>
+	<key>UIStatusBarHidden</key>
+	<true/>
+
 </dict>
 </plist>

@@ -34,12 +34,12 @@ class _TopPageState extends State<TopPage> {
   List<Map<String, String>> soundList = [
     {
       "title": "hogehoge",
-      "imagePath": "assets/image001.png",
+      "imagePath": "assets/image002.png",
       "soundPath": "sound/brainrelax.mp3",
     },
     {
       "title": "hogehoge",
-      "imagePath": "assets/image002.png",
+      "imagePath": "assets/image003.png",
       "soundPath": "sound-with-p/brainrelax.mp3",
     }
   ];
@@ -79,7 +79,9 @@ class _TopPageState extends State<TopPage> {
    */
   Widget _soundListBox(BuildContext context) {
     return soundList == null
-        ? Container()
+        ? Container(
+            color: Color(0xFF010101),
+          )
         : GridView.count(crossAxisCount: 2, children: _makeSoundsWidget());
   }
 
@@ -111,6 +113,7 @@ class _TopPageState extends State<TopPage> {
         },
         child: Container(
           // width: 100,
+          color: Color(0xFF010101),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisSize: MainAxisSize.max,

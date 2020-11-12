@@ -37,10 +37,17 @@ dependencies:
   firebase_core: # new!
   mvc_pattern: # new!
   get_it: # new!
+  flutter_native_splash: #new!
+  sleek_circular_slider: #new!
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_native_splash:
+  image: "assets/splash/soundapp.png"
+  color: "000000"
+  fill: false
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

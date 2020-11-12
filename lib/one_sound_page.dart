@@ -11,14 +11,11 @@ import 'package:flutter/src/foundation/constants.dart';
 import 'player_widget.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 import 'fetch_state.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 import 'con.dart';
 
 typedef void OnError(Exception exception);
-
-const kUrl1 = 'https://luan.xyz/files/audio/ambient_c_motion.mp3';
-const kUrl2 = 'https://luan.xyz/files/audio/nasa_on_a_mission.mp3';
-const kUrl3 = 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1xtra_mf_p';
 
 class OneSoundPage extends StatefulWidget {
   // final String title;
