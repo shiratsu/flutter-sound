@@ -11,7 +11,6 @@ import 'package:flutter/src/foundation/constants.dart';
 import 'player_widget.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 import 'fetch_state.dart';
-import 'package:percent_indicator/percent_indicator.dart';
 
 import 'con.dart';
 
@@ -65,8 +64,7 @@ class _OneSoundPageState extends StateMVC<OneSoundPage> {
     return SingleChildScrollView(
       child: _Tab(children: [
         Text(
-          'Sample 1 ($kUrl1)',
-          key: Key('url1'),
+          'Sample 1',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         PlayerWidget(url: soundUrl),
@@ -90,25 +88,25 @@ class _OneSoundPageState extends StateMVC<OneSoundPage> {
     );
   }
 
-  Future<int> _getDuration() async {
-    // File audiofile = await audioCache.load('audio2.mp3');
-    // await advancedPlayer.setUrl(
-    //   audiofile.path,
-    // );
-    int duration = await Future.delayed(
-        Duration(seconds: 2), () => advancedPlayer.getDuration());
-    return duration;
-  }
+  // Future<int> _getDuration() async {
+  //   // File audiofile = await audioCache.load('audio2.mp3');
+  //   // await advancedPlayer.setUrl(
+  //   //   audiofile.path,
+  //   // );
+  //   int duration = await Future.delayed(
+  //       Duration(seconds: 2), () => advancedPlayer.getDuration());
+  //   return duration;
+  // }
 
-  Widget notification() {
-    return _Tab(children: [
-      Text('Play notification sound: \'messenger.mp3\':'),
-      _Btn(
-          txt: 'Play',
-          onPressed: () =>
-              audioCache.play('messenger.mp3', isNotification: true)),
-    ]);
-  }
+  // Widget notification() {
+  //   return _Tab(children: [
+  //     Text('Play notification sound: \'messenger.mp3\':'),
+  //     _Btn(
+  //         txt: 'Play',
+  //         onPressed: () =>
+  //             audioCache.play('messenger.mp3', isNotification: true)),
+  //   ]);
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -164,20 +162,6 @@ class _AdvancedState extends State<Advanced> {
     return SingleChildScrollView(
       child: _Tab(
         children: [
-          Column(children: [
-            Text('Source Url'),
-            Row(children: [
-              _Btn(
-                  txt: 'Audio 1',
-                  onPressed: () => widget.advancedPlayer.setUrl(kUrl1)),
-              _Btn(
-                  txt: 'Audio 2',
-                  onPressed: () => widget.advancedPlayer.setUrl(kUrl2)),
-              _Btn(
-                  txt: 'Stream',
-                  onPressed: () => widget.advancedPlayer.setUrl(kUrl3)),
-            ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
-          ]),
           Column(children: [
             Text('Release Mode'),
             Row(children: [

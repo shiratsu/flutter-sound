@@ -83,6 +83,46 @@ class _PlayerWidgetState extends State<PlayerWidget> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Padding(
+              padding: EdgeInsets.all(12.0),
+              child: Stack(
+                children: [
+                  // Slider(
+                  //   onChanged: (v) {
+                  //     final Position = v * _duration.inMilliseconds;
+                  //     _audioPlayer
+                  //         .seek(Duration(milliseconds: Position.round()));
+                  //   },
+                  //   value: (_position != null &&
+                  //           _duration != null &&
+                  //           _position.inMilliseconds > 0 &&
+                  //           _position.inMilliseconds < _duration.inMilliseconds)
+                  //       ? _position.inMilliseconds / _duration.inMilliseconds
+                  //       : 0.0,
+                  // ),
+                  SleekCircularSlider(
+                      appearance: CircularSliderAppearance(),
+                      onChange: (double value) {
+                        final Position = value * _duration.inMilliseconds;
+                        _audioPlayer
+                            .seek(Duration(milliseconds: Position.round()));
+                      })
+                ],
+              ),
+            ),
+            Text(
+              _position != null
+                  ? '${_positionText ?? ''} / ${_durationText ?? ''}'
+                  : _duration != null
+                      ? _durationText
+                      : '',
+              style: TextStyle(fontSize: 24.0),
+            ),
+          ],
+        ),
         Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -114,46 +154,6 @@ class _PlayerWidgetState extends State<PlayerWidget> {
                   ? Icon(Icons.volume_up)
                   : Icon(Icons.hearing),
               color: Colors.cyan,
-            ),
-          ],
-        ),
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Padding(
-              padding: EdgeInsets.all(12.0),
-              child: Stack(
-                children: [
-                  Slider(
-                    onChanged: (v) {
-                      final Position = v * _duration.inMilliseconds;
-                      _audioPlayer
-                          .seek(Duration(milliseconds: Position.round()));
-                    },
-                    value: (_position != null &&
-                            _duration != null &&
-                            _position.inMilliseconds > 0 &&
-                            _position.inMilliseconds < _duration.inMilliseconds)
-                        ? _position.inMilliseconds / _duration.inMilliseconds
-                        : 0.0,
-                  ),
-                  SleekCircularSlider(
-                      appearance: CircularSliderAppearance(),
-                      onChange: (double value) {
-                        final Position = value * _duration.inMilliseconds;
-                        _audioPlayer
-                          .seek(Duration(milliseconds: Position.round()));
-                      });
-                ],
-              ),
-            ),
-            Text(
-              _position != null
-                  ? '${_positionText ?? ''} / ${_durationText ?? ''}'
-                  : _duration != null
-                      ? _durationText
-                      : '',
-              style: TextStyle(fontSize: 24.0),
             ),
           ],
         ),
