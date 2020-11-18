@@ -4,6 +4,8 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
+import 'package:provider/provider.dart';
+import 'common/sound_duration_provider.dart';
 
 enum PlayerState { stopped, playing, paused }
 enum PlayingRouteState { speakers, earpiece }
@@ -90,26 +92,19 @@ class _PlayerWidgetState extends State<PlayerWidget> {
               padding: EdgeInsets.all(12.0),
               child: Stack(
                 children: [
-                  // Slider(
-                  //   onChanged: (v) {
-                  //     final Position = v * _duration.inMilliseconds;
-                  //     _audioPlayer
-                  //         .seek(Duration(milliseconds: Position.round()));
-                  //   },
-                  //   value: (_position != null &&
-                  //           _duration != null &&
-                  //           _position.inMilliseconds > 0 &&
-                  //           _position.inMilliseconds < _duration.inMilliseconds)
-                  //       ? _position.inMilliseconds / _duration.inMilliseconds
-                  //       : 0.0,
-                  // ),
-                  SleekCircularSlider(
-                      appearance: CircularSliderAppearance(),
-                      onChange: (double value) {
-                        final Position = value * _duration.inMilliseconds;
-                        _audioPlayer
-                            .seek(Duration(milliseconds: Position.round()));
-                      })
+                  Slider(
+                    onChanged: (v) {
+                      final Position = v * _duration.inMilliseconds;
+                      _audioPlayer
+                          .seek(Duration(milliseconds: Position.round()));
+                    },
+                    value: (_position != null &&
+                            _duration != null &&
+                            _position.inMilliseconds > 0 &&
+                            _position.inMilliseconds < _duration.inMilliseconds)
+                        ? _position.inMilliseconds / _duration.inMilliseconds
+                        : 0.0,
+                  ),
                 ],
               ),
             ),
