@@ -39,6 +39,7 @@ dependencies:
   flutter_native_splash: #new!
   sleek_circular_slider: #new!
   provider: #new!
+  flutter_circular_slider: ^lastest_version
 
 dev_dependencies:
   flutter_test:

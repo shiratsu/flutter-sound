@@ -105,6 +105,17 @@ class _PlayerWidgetState extends State<PlayerWidget> {
                         ? _position.inMilliseconds / _duration.inMilliseconds
                         : 0.0,
                   ),
+                  // SleekCircularSlider(
+                  //   appearance: CircularSliderAppearance(
+                  //       customWidths: CustomSliderWidths(progressBarWidth: 10)),
+                  //   min: 0,
+                  //   max: 20,
+                  //   initialValue: 0,
+                  //   onChange: (double value) {
+                  //     // callback providing a value while its being changed (with a pan gesture)
+                  //     print(value);
+                  //   },
+                  // )
                 ],
               ),
             ),
