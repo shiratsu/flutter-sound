@@ -1,7 +1,7 @@
 import UIKit
 import Flutter
-//import FirebaseCore
-//import Firebase
+import FirebaseCore
+import Firebase
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -19,17 +19,17 @@ import Flutter
     
     
     func initFirebaseSetting(){
-//        let strBuildKey: String = Bundle.main.object(forInfoDictionaryKey: "envKey") as? String ?? ""
-//        let strFileName = "GoogleService-Info-"+strBuildKey
-//        let filePath = Bundle.main.path(forResource: strFileName, ofType: "plist")
-//        guard let constFilePath = filePath
-//            ,let fileopts = FirebaseOptions(contentsOfFile: constFilePath)
-//            else
-//        {
-//            //assert(false, "Couldn't load config file")
-//            return
-//            
-//        }
-//        FirebaseApp.configure(options: fileopts)
+        let strBuildKey: String = Bundle.main.object(forInfoDictionaryKey: "envKey") as? String ?? ""
+        let strFileName = "GoogleService-Info-"+strBuildKey
+        let filePath = Bundle.main.path(forResource: strFileName, ofType: "plist")
+        guard let constFilePath = filePath
+            ,let fileopts = FirebaseOptions(contentsOfFile: constFilePath)
+            else
+        {
+            //assert(false, "Couldn't load config file")
+            return
+            
+        }
+        FirebaseApp.configure(options: fileopts)
     }
 }
