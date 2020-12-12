@@ -14,9 +14,6 @@
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
-		F314811225723F5F002E1CBE /* GoogleService-Info-prod.plist in Resources */ = {isa = PBXBuildFile; fileRef = F314810F25723F5F002E1CBE /* GoogleService-Info-prod.plist */; };
-		F314811325723F5F002E1CBE /* GoogleService-Info-stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = F314811025723F5F002E1CBE /* GoogleService-Info-stg.plist */; };
-		F314811425723F5F002E1CBE /* GoogleService-Info-dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = F314811125723F5F002E1CBE /* GoogleService-Info-dev.plist */; };
 		F34FF0A424B35DC000CAE04E /* GoogleService-Info-prod.plist in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0A124B35DBF00CAE04E /* GoogleService-Info-prod.plist */; };
 		F34FF0A524B35DC000CAE04E /* GoogleService-Info-stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0A224B35DBF00CAE04E /* GoogleService-Info-stg.plist */; };
 		F34FF0A624B35DC000CAE04E /* GoogleService-Info-dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = F34FF0A324B35DC000CAE04E /* GoogleService-Info-dev.plist */; };
@@ -55,9 +52,6 @@
 		A0D22B04B53200BE5924438E /* Pods-Runner.debug-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-development.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-development.xcconfig"; sourceTree = "<group>"; };
 		DE8C3604CC74B0DE27273B11 /* Pods-Runner.release-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-staging.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-staging.xcconfig"; sourceTree = "<group>"; };
 		EC2FF68C9F7EC8CE0B8FAB19 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F314810F25723F5F002E1CBE /* GoogleService-Info-prod.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-prod.plist"; path = "../../../firebase-conf/GoogleService-Info-prod.plist"; sourceTree = "<group>"; };
-		F314811025723F5F002E1CBE /* GoogleService-Info-stg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-stg.plist"; path = "../../../firebase-conf/GoogleService-Info-stg.plist"; sourceTree = "<group>"; };
-		F314811125723F5F002E1CBE /* GoogleService-Info-dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-dev.plist"; path = "../../../firebase-conf/GoogleService-Info-dev.plist"; sourceTree = "<group>"; };
 		F34FF0A124B35DBF00CAE04E /* GoogleService-Info-prod.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-prod.plist"; sourceTree = "<group>"; };
 		F34FF0A224B35DBF00CAE04E /* GoogleService-Info-stg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-stg.plist"; sourceTree = "<group>"; };
 		F34FF0A324B35DC000CAE04E /* GoogleService-Info-dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-dev.plist"; sourceTree = "<group>"; };
@@ -106,9 +100,6 @@
 		9740EEB11CF90186004384FC /* Flutter */ = {
 			isa = PBXGroup;
 			children = (
-				F314811125723F5F002E1CBE /* GoogleService-Info-dev.plist */,
-				F314810F25723F5F002E1CBE /* GoogleService-Info-prod.plist */,
-				F314811025723F5F002E1CBE /* GoogleService-Info-stg.plist */,
 				F34FF0BB24BBC29A00CAE04E /* Debug-Development.xcconfig */,
 				F34FF0BC24BBC29A00CAE04E /* Development.xcconfig */,
 				F34FF0BE24BBC29A00CAE04E /* Production.xcconfig */,
@@ -233,10 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F314811225723F5F002E1CBE /* GoogleService-Info-prod.plist in Resources */,
-				F314811425723F5F002E1CBE /* GoogleService-Info-dev.plist in Resources */,
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
-				F314811325723F5F002E1CBE /* GoogleService-Info-stg.plist in Resources */,
 				F34FF0A624B35DC000CAE04E /* GoogleService-Info-dev.plist in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
 				F34FF0A524B35DC000CAE04E /* GoogleService-Info-stg.plist in Resources */,
