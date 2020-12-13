@@ -780,7 +780,7 @@
 				ENV_KEY = stg;
 				FLUTTER_BUILD_NAME = 1.0.0;
 				FLUTTER_BUILD_NUMBER = 1;
-				FLUTTER_ROOT = /usr/local/flutter/bin/flutter;
+				FLUTTER_ROOT = /usr/local/flutter;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
