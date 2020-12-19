@@ -1,0 +1,119 @@
+{
+  "project_info": {
+    "project_number": "944710506543",
+    "firebase_url": "https://sound-app-24306.firebaseio.com",
+    "project_id": "sound-app-24306",
+    "storage_bucket": "sound-app-24306.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944710506543:android:753096b743d4e486ad4eda",
+        "android_client_info": {
+          "package_name": "jp.heal_sounds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944710506543-kn7nuot40mm3ilrv367pe28p1nfe0bfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuyocCQ_1hpmj3J4RQYUdy6FO_Jf0zZIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944710506543-kn7nuot40mm3ilrv367pe28p1nfe0bfm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "944710506543-2v9o74d1t4e62h1i7qa4p5jt83pvdv8h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "jp.heal-sounds"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944710506543:android:5d866f8cc22e2b15ad4eda",
+        "android_client_info": {
+          "package_name": "jp.heal_sounds.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944710506543-kn7nuot40mm3ilrv367pe28p1nfe0bfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuyocCQ_1hpmj3J4RQYUdy6FO_Jf0zZIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944710506543-kn7nuot40mm3ilrv367pe28p1nfe0bfm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "944710506543-2v9o74d1t4e62h1i7qa4p5jt83pvdv8h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "jp.heal-sounds"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944710506543:android:0754f68602240c6dad4eda",
+        "android_client_info": {
+          "package_name": "jp.heal_sounds.stg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944710506543-kn7nuot40mm3ilrv367pe28p1nfe0bfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuyocCQ_1hpmj3J4RQYUdy6FO_Jf0zZIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944710506543-kn7nuot40mm3ilrv367pe28p1nfe0bfm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "944710506543-2v9o74d1t4e62h1i7qa4p5jt83pvdv8h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "jp.heal-sounds"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

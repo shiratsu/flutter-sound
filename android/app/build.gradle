@@ -26,12 +26,20 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 apply plugin: 'com.google.gms.google-services'
 
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
 android {
     compileSdkVersion 28
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+
+    flavorDimensions "default" // OK
 
     lintOptions {
         disable 'InvalidPackage'
@@ -53,30 +61,41 @@ android {
         APP_NAME_STAGING = "StgHealSound"
     }
 
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    productFlavors {
+        development {
+            dimension "default"
+            applicationIdSuffix = ".dev"
+            versionNameSuffix ".dev"
+            manifestPlaceholders = [ applicationLabel: APP_NAME_DEV,admobAppId: ""]
+        }
+        staging {
+            dimension "default"
+            applicationIdSuffix = ".stg"
+            versionNameSuffix ".stg"
+            manifestPlaceholders = [ applicationLabel: APP_NAME_STAGING,admobAppId: ""]
+        }
+
+        production {
+            dimension "default"
+            manifestPlaceholders = [ applicationLabel: APP_NAME,admobAppId: ""]
+        }
+    }
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
-            dimention: "default"
-            shrinkResources false
-            manifestPlaceholders = [admobAppId: System.getenv("ADMOB_APP_PROD")]
-        }
-        debug {
-            dimension "default"
-            applicationIdSuffix ".dev"
-            versionNameSuffix ".dev"
-            minifyEnabled false
-            signingConfig signingConfigs.debug
-            //manifestPlaceholders = [label: "testlabel"] #ベタ書きの例、これでも動くが...
-            manifestPlaceholders = [admobAppId: System.getenv("ADMOB_APP_DEV")]
-        }
-        stg {
-            dimension "default"
-            applicationIdSuffix ".stg"
-            versionNameSuffix ".stg"
-            minifyEnabled false
-            //manifestPlaceholders = [label: "testlabel"] #ベタ書きの例、これでも動くが...
-            manifestPlaceholders = [admobAppId: System.getenv("ADMOB_APP_STG")]
+            signingConfig signingConfigs.release
+            debuggable false
         }
     }
 }
