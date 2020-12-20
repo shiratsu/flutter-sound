@@ -1,0 +1,4 @@
+storePassword=sound20201219
+keyPassword=sound20201219
+keyAlias=key0
+storeFile=/Users/vagrant/keystore/sound-keystore2.jks
