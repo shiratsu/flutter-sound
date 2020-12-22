@@ -18,7 +18,7 @@ require "./report_func"
 ENV["app-id-stg"] = "1:944710506543:ios:8bf1c715021afd9cad4eda"
 ENV["app-id-dev"] = "1:944710506543:ios:c9d26b30f06f3eefad4eda"
 ENV["app-id-prod"] = "1:944710506543:ios:8de4e07e31244461ad4eda"
-ENV["group"] = "sound"
+ENV["group"] = "only-me"
 
 default_platform(:ios)
 
