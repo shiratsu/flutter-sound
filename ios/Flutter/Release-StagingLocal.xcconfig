@@ -1,0 +1,12 @@
+//
+//  Release-StagingLocal.xcconfig
+//  Runner
+//
+//  Created by 平塚 俊輔 on 2020/12/25.
+//  Copyright © 2020 The Chromium Authors. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "Release.xcconfig"
+#include "StagingLocal.xcconfig"
