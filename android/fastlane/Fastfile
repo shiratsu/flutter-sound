@@ -17,7 +17,7 @@ require "./commit_message"
 
 default_platform(:android)
 
-ENV["group"] = "only-me"
+ENV["group"] = "sound"
 ENV["firebase_cli_path"] = "/usr/local/bin/firebase"
 ENV["app-id-stg"] = "1:944710506543:android:0754f68602240c6dad4eda"
 ENV["app-id-dev"] = "1:944710506543:android:5d866f8cc22e2b15ad4eda"
